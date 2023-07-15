@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "3eea5679-c5b2-4902-ba00-53e2c20d730e",
+		"name": "Sharing-vision",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23341373"
+	},
+	"item": [
+		{
+			"name": "new article",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"CtlXaBHGLUwvXY3lAXcx\",\n    \"content\": \"spPIbbeSuZXm8HSzQ1bcGIsvIL07aRjrnlboU607fabwM9UdpEZKrjAzZtcFjVaNeKGyNOGXqJMqxrJ FuzttxCRcgx2FUiHSlIRlDeIi7kNgtBr1ne3zDch5um6YjikefkJjxF87tXBnMpox13KQ94SxiIjpjVG RFswtDrubt0siRUDc2Ts7HyeW7nRQacQNZqz94TD\",\n    \"category\":\"def\",\n    \"status\":\"publish\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/article"
+			},
+			"response": []
+		},
+		{
+			"name": "show limit offset",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/article/3/0"
+			},
+			"response": []
+		},
+		{
+			"name": "show by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/article/1"
+			},
+			"response": []
+		},
+		{
+			"name": "edit article",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"newly edited title from before changes\",\n    \"content\": \"gggpPIbbeSuZXm8HSzQ1bcGIsvIL07aRjrnlboU607fabwM9UdpEZKrjAzZtcFjVaNeKGyNOGXqJMqxrJ FuzttxCRcgx2FUiHSlIRlDeIi7kNgtBr1ne3zDch5um6YjikefkJjxF87tXBnMpox13KQ94SxiIjpjVG RFswtDrubt0siRUDc2Ts7HyeW7nRQacQNZqz94TD\",\n    \"category\":\"new\",\n    \"status\":\"publish\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/article/1"
+			},
+			"response": []
+		},
+		{
+			"name": "delete article",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:5000/article/1"
+			},
+			"response": []
+		}
+	]
+}
